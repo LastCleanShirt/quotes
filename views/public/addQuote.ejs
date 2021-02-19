@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.css">    
+  <link rel="stylesheet" href="../css/style.css">    
+  </head>
+    <%- include('../template/navbar.ejs') %>
+  <body>
+      <div class="container-sm border-rounded" style="max-width: 80%;">
+          <form action="http://0.0.0.0:3000/submitQuote" method="POST">
+            <div class="input-group mb-3">
+                <h1>Add Quote</h1>
+            </div>
+            <div class="input-group mb-3">
+                <textarea class="form-control" placeholder="Quote" aria-label="quote" name="quote" required></textarea>
+            </div>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Person who create quote" aria-label="person_quote" name="person_quote" required>
+            </div>
+            <button type="submit" class="btn btn-primary" href="http://0.0.0.0:3000/">Add</button>
+          </form>
+      </div>
+  </body>
+</html>
